@@ -12,6 +12,17 @@
 		05319EC92114816300A38ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05319EC72114816300A38ADD /* Main.storyboard */; };
 		05319ECB2114816700A38ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05319ECA2114816700A38ADD /* Assets.xcassets */; };
 		05319ECE2114816700A38ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05319ECC2114816700A38ADD /* LaunchScreen.storyboard */; };
+		053FBEDF211C68330016259A /* BLEPeripheralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FBEDE211C68330016259A /* BLEPeripheralService.swift */; };
+		05735DF121187D5A00C4F1ED /* VideoCaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05735DF021187D5A00C4F1ED /* VideoCaptureService.swift */; };
+		05B59356212193D800ACB60C /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B59355212193D800ACB60C /* VideoListViewController.swift */; };
+		05B593592121942F00ACB60C /* VideoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B593582121942F00ACB60C /* VideoListTableViewCell.swift */; };
+		05B5935E212195BF00ACB60C /* VideoListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B5935D212195BF00ACB60C /* VideoListVM.swift */; };
+		05B59361212198D400ACB60C /* FileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B59360212198D400ACB60C /* FileEntity.swift */; };
+		05B593652121B0B700ACB60C /* VideoFilesSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B593642121B0B700ACB60C /* VideoFilesSource.swift */; };
+		05B593672121BE6800ACB60C /* VideoFileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B593662121BE6800ACB60C /* VideoFileEntity.swift */; };
+		05DD80A1211B232D00EE6A0E /* BLECentralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD80A0211B232D00EE6A0E /* BLECentralService.swift */; };
+		05DD80A3211B281B00EE6A0E /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD80A2211B281B00EE6A0E /* MainVM.swift */; };
+		E02E54FE7FC79D67EA6B4593 /* libPods-MLProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D244D640455343521AE13B6 /* libPods-MLProj.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +33,19 @@
 		05319ECA2114816700A38ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05319ECD2114816700A38ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05319ECF2114816700A38ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		053FBEDE211C68330016259A /* BLEPeripheralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralService.swift; sourceTree = "<group>"; };
+		05735DF021187D5A00C4F1ED /* VideoCaptureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureService.swift; sourceTree = "<group>"; };
+		05B59355212193D800ACB60C /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
+		05B593582121942F00ACB60C /* VideoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListTableViewCell.swift; sourceTree = "<group>"; };
+		05B5935D212195BF00ACB60C /* VideoListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListVM.swift; sourceTree = "<group>"; };
+		05B59360212198D400ACB60C /* FileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEntity.swift; sourceTree = "<group>"; };
+		05B593642121B0B700ACB60C /* VideoFilesSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilesSource.swift; sourceTree = "<group>"; };
+		05B593662121BE6800ACB60C /* VideoFileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFileEntity.swift; sourceTree = "<group>"; };
+		05DD80A0211B232D00EE6A0E /* BLECentralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralService.swift; sourceTree = "<group>"; };
+		05DD80A2211B281B00EE6A0E /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		9D244D640455343521AE13B6 /* libPods-MLProj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLProj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D96F7510A172265C899643 /* Pods-MLProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLProj/Pods-MLProj.release.xcconfig"; sourceTree = "<group>"; };
+		E824EC6287AC4D423F245879 /* Pods-MLProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLProj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLProj/Pods-MLProj.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02E54FE7FC79D67EA6B4593 /* libPods-MLProj.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +65,8 @@
 			children = (
 				05319EC22114816300A38ADD /* MLProj */,
 				05319EC12114816300A38ADD /* Products */,
+				68E88A1E38DAA15D37A862D6 /* Pods */,
+				639AB65D0DF0F16F4CF4AC7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +81,105 @@
 		05319EC22114816300A38ADD /* MLProj */ = {
 			isa = PBXGroup;
 			children = (
+				05B5935F212198BA00ACB60C /* Entities */,
+				05B5935B2121954600ACB60C /* Resources */,
+				05B5935A2121951A00ACB60C /* Modules */,
+				05735DEF21187D4000C4F1ED /* Utils */,
 				05319EC32114816300A38ADD /* AppDelegate.swift */,
-				05319EC52114816300A38ADD /* ViewController.swift */,
-				05319EC72114816300A38ADD /* Main.storyboard */,
-				05319ECA2114816700A38ADD /* Assets.xcassets */,
-				05319ECC2114816700A38ADD /* LaunchScreen.storyboard */,
 				05319ECF2114816700A38ADD /* Info.plist */,
 			);
 			path = MLProj;
+			sourceTree = "<group>";
+		};
+		05735DEF21187D4000C4F1ED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				05DD809F211B231800EE6A0E /* Video */,
+				05DD809E211B230700EE6A0E /* BLE */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		05B59357212193F500ACB60C /* VideoList */ = {
+			isa = PBXGroup;
+			children = (
+				05B59355212193D800ACB60C /* VideoListViewController.swift */,
+				05B593582121942F00ACB60C /* VideoListTableViewCell.swift */,
+				05B5935D212195BF00ACB60C /* VideoListVM.swift */,
+			);
+			path = VideoList;
+			sourceTree = "<group>";
+		};
+		05B5935A2121951A00ACB60C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				05DD80A2211B281B00EE6A0E /* MainVM.swift */,
+				05319EC52114816300A38ADD /* ViewController.swift */,
+				05B59357212193F500ACB60C /* VideoList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		05B5935B2121954600ACB60C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05B5935C2121956200ACB60C /* Storyboards */,
+				05319ECA2114816700A38ADD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		05B5935C2121956200ACB60C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				05319EC72114816300A38ADD /* Main.storyboard */,
+				05319ECC2114816700A38ADD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		05B5935F212198BA00ACB60C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				05B59360212198D400ACB60C /* FileEntity.swift */,
+				05B593662121BE6800ACB60C /* VideoFileEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		05DD809E211B230700EE6A0E /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				05DD80A0211B232D00EE6A0E /* BLECentralService.swift */,
+				053FBEDE211C68330016259A /* BLEPeripheralService.swift */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		05DD809F211B231800EE6A0E /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				05735DF021187D5A00C4F1ED /* VideoCaptureService.swift */,
+				05B593642121B0B700ACB60C /* VideoFilesSource.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		639AB65D0DF0F16F4CF4AC7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D244D640455343521AE13B6 /* libPods-MLProj.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68E88A1E38DAA15D37A862D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E824EC6287AC4D423F245879 /* Pods-MLProj.debug.xcconfig */,
+				B9D96F7510A172265C899643 /* Pods-MLProj.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05319ED22114816700A38ADD /* Build configuration list for PBXNativeTarget "MLProj" */;
 			buildPhases = (
+				48F608079274967B6FCE8BFC /* [CP] Check Pods Manifest.lock */,
 				05319EBC2114816300A38ADD /* Sources */,
 				05319EBD2114816300A38ADD /* Frameworks */,
 				05319EBE2114816300A38ADD /* Resources */,
+				FC99EABC548E6F2D49D06693 /* [CP] Embed Pods Frameworks */,
+				A5C88C50476FA737102E87C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +217,11 @@
 				TargetAttributes = {
 					05319EBF2114816300A38ADD = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -130,13 +256,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48F608079274967B6FCE8BFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLProj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5C88C50476FA737102E87C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLProj/Pods-MLProj-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC99EABC548E6F2D49D06693 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLProj/Pods-MLProj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05319EBC2114816300A38ADD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B59361212198D400ACB60C /* FileEntity.swift in Sources */,
+				05B59356212193D800ACB60C /* VideoListViewController.swift in Sources */,
+				05DD80A3211B281B00EE6A0E /* MainVM.swift in Sources */,
+				05735DF121187D5A00C4F1ED /* VideoCaptureService.swift in Sources */,
+				05B593672121BE6800ACB60C /* VideoFileEntity.swift in Sources */,
 				05319EC62114816300A38ADD /* ViewController.swift in Sources */,
 				05319EC42114816300A38ADD /* AppDelegate.swift in Sources */,
+				05B593652121B0B700ACB60C /* VideoFilesSource.swift in Sources */,
+				053FBEDF211C68330016259A /* BLEPeripheralService.swift in Sources */,
+				05B5935E212195BF00ACB60C /* VideoListVM.swift in Sources */,
+				05DD80A1211B232D00EE6A0E /* BLECentralService.swift in Sources */,
+				05B593592121942F00ACB60C /* VideoListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +465,13 @@
 		};
 		05319ED32114816700A38ADD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E824EC6287AC4D423F245879 /* Pods-MLProj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5BCDXKAUFJ;
 				INFOPLIST_FILE = MLProj/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +485,13 @@
 		};
 		05319ED42114816700A38ADD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9D96F7510A172265C899643 /* Pods-MLProj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5BCDXKAUFJ;
 				INFOPLIST_FILE = MLProj/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
