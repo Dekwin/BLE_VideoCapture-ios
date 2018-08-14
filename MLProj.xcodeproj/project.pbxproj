@@ -14,12 +14,14 @@
 		05319ECE2114816700A38ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05319ECC2114816700A38ADD /* LaunchScreen.storyboard */; };
 		053FBEDF211C68330016259A /* BLEPeripheralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FBEDE211C68330016259A /* BLEPeripheralService.swift */; };
 		05735DF121187D5A00C4F1ED /* VideoCaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05735DF021187D5A00C4F1ED /* VideoCaptureService.swift */; };
+		05A297862121D4D8007F52DC /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A297852121D4D8007F52DC /* AppConstants.swift */; };
 		05B59356212193D800ACB60C /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B59355212193D800ACB60C /* VideoListViewController.swift */; };
 		05B593592121942F00ACB60C /* VideoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B593582121942F00ACB60C /* VideoListTableViewCell.swift */; };
 		05B5935E212195BF00ACB60C /* VideoListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B5935D212195BF00ACB60C /* VideoListVM.swift */; };
 		05B59361212198D400ACB60C /* FileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B59360212198D400ACB60C /* FileEntity.swift */; };
 		05B593652121B0B700ACB60C /* VideoFilesSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B593642121B0B700ACB60C /* VideoFilesSource.swift */; };
 		05B593672121BE6800ACB60C /* VideoFileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B593662121BE6800ACB60C /* VideoFileEntity.swift */; };
+		05D8932C2122E6BC00423F46 /* Data+Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8932B2122E6BC00423F46 /* Data+Converters.swift */; };
 		05DD80A1211B232D00EE6A0E /* BLECentralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD80A0211B232D00EE6A0E /* BLECentralService.swift */; };
 		05DD80A3211B281B00EE6A0E /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD80A2211B281B00EE6A0E /* MainVM.swift */; };
 		E02E54FE7FC79D67EA6B4593 /* libPods-MLProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D244D640455343521AE13B6 /* libPods-MLProj.a */; };
@@ -35,12 +37,14 @@
 		05319ECF2114816700A38ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053FBEDE211C68330016259A /* BLEPeripheralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralService.swift; sourceTree = "<group>"; };
 		05735DF021187D5A00C4F1ED /* VideoCaptureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureService.swift; sourceTree = "<group>"; };
+		05A297852121D4D8007F52DC /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		05B59355212193D800ACB60C /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		05B593582121942F00ACB60C /* VideoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListTableViewCell.swift; sourceTree = "<group>"; };
 		05B5935D212195BF00ACB60C /* VideoListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListVM.swift; sourceTree = "<group>"; };
 		05B59360212198D400ACB60C /* FileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEntity.swift; sourceTree = "<group>"; };
 		05B593642121B0B700ACB60C /* VideoFilesSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilesSource.swift; sourceTree = "<group>"; };
 		05B593662121BE6800ACB60C /* VideoFileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFileEntity.swift; sourceTree = "<group>"; };
+		05D8932B2122E6BC00423F46 /* Data+Converters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Converters.swift"; sourceTree = "<group>"; };
 		05DD80A0211B232D00EE6A0E /* BLECentralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralService.swift; sourceTree = "<group>"; };
 		05DD80A2211B281B00EE6A0E /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		9D244D640455343521AE13B6 /* libPods-MLProj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLProj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,7 @@
 		05319EC22114816300A38ADD /* MLProj */ = {
 			isa = PBXGroup;
 			children = (
+				05D8932A2122E6AC00423F46 /* Extensions */,
 				05B5935F212198BA00ACB60C /* Entities */,
 				05B5935B2121954600ACB60C /* Resources */,
 				05B5935A2121951A00ACB60C /* Modules */,
@@ -96,6 +101,7 @@
 			children = (
 				05DD809F211B231800EE6A0E /* Video */,
 				05DD809E211B230700EE6A0E /* BLE */,
+				05A297852121D4D8007F52DC /* AppConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -145,6 +151,14 @@
 				05B593662121BE6800ACB60C /* VideoFileEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		05D8932A2122E6AC00423F46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05D8932B2122E6BC00423F46 /* Data+Converters.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		05DD809E211B230700EE6A0E /* BLE */ = {
@@ -323,6 +337,8 @@
 				053FBEDF211C68330016259A /* BLEPeripheralService.swift in Sources */,
 				05B5935E212195BF00ACB60C /* VideoListVM.swift in Sources */,
 				05DD80A1211B232D00EE6A0E /* BLECentralService.swift in Sources */,
+				05A297862121D4D8007F52DC /* AppConstants.swift in Sources */,
+				05D8932C2122E6BC00423F46 /* Data+Converters.swift in Sources */,
 				05B593592121942F00ACB60C /* VideoListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

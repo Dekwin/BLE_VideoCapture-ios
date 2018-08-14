@@ -10,24 +10,16 @@ import Foundation
 
 class VideoListVM {
     
-    var videos: [FileEntity] = []
-    let videoCaptureService: VideoCaptureService
+    var videos: [VideoFileEntity] = []
+    private let videosSource: VideoFilesSource
     
-    init(videoCaptureService: VideoCaptureService) {
-        self.videoCaptureService = videoCaptureService
+    init(videosSource: VideoFilesSource) {
+        self.videosSource = videosSource
         configureServices()
-        videoCaptureService.startRecordingToFile { (error, url)  in
-            
-        }
     }
     
     private func configureServices() {
-        do {
-            try videoCaptureService.configure(withFilesSource: VideoFilesSource(withFilesSourceURL: FileManager.default.urls(for: .documentDirectory, in:.userDomainMask).first!))
-        } catch {
-            
-        }
+       videos = videosSource.getAllVideos()
     }
   
-    
 }

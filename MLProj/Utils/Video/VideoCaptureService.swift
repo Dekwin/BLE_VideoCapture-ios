@@ -26,6 +26,10 @@ class VideoCaptureService: NSObject {
         return preview
     }()
     
+    var state: VideoCaptureState {
+        return VideoCaptureState(isRecording: fileOutput.isRecording, sessionIsRunning: cameraSession.isRunning)
+    }
+    
     override init() {
         super.init()
     }
@@ -34,10 +38,10 @@ class VideoCaptureService: NSObject {
 
         if !fileOutput.isRecording && !cameraSession.isRunning {
             videoFilesSource.prepareForWritingToFile(withName: name) { (error, newFileUrl)  in
-                if error == nil {
+                //if error == nil {
                     self.cameraSession.startRunning()
                     self.fileOutput.startRecording(to: newFileUrl, recordingDelegate: self)
-                }
+               // }
                 callback(error, newFileUrl)
             }
         } else {
@@ -73,11 +77,11 @@ class VideoCaptureService: NSObject {
 extension VideoCaptureService: AVCaptureFileOutputRecordingDelegate {
     
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
-        print("#rec \(outputFileURL)")
+        print("#didFinishRecordingTo \(outputFileURL) error: \(error)")
     }
     
     func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
-        print("#start rec \(fileURL)")
+        print("#didStartRecordingTo rec \(fileURL)")
     }
     
     

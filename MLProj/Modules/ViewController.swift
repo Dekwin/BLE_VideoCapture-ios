@@ -11,6 +11,13 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBAction func bleSwitcherSwitched(_ sender: UISwitch) {
+        if sender.isOn {
+            vm.startRecording()
+        } else {
+            vm.stopRecording()
+        }
+    }
     
     let vm = MainVM.configuredVM()
 

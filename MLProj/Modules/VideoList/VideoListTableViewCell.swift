@@ -22,5 +22,9 @@ class VideoListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func update(withVideo video: VideoFileEntity) {
+        videoTitleLabel.text = video.title
+    }
 
 }

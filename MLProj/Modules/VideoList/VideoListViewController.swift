@@ -15,22 +15,26 @@ class VideoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm = VideoListVM(videoCaptureService: VideoCaptureService())
+        setViews()
+        vm = VideoListVM(videosSource: VideoFilesSource(withFilesSourceURL: AppConstants.Video.folderUrl!))
+        tableView.reloadData()
     }
-
+    
+    private func setViews() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    
-
 }
 
 extension VideoListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoListTableViewCell", for: indexPath) as! VideoListTableViewCell
-        
+        cell.update(withVideo: vm.videos[indexPath.row])
         return cell
     }
     
