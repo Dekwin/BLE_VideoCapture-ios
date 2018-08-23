@@ -15,19 +15,13 @@ class VideoFilesSource {
         filesSourceURL = url
     }
     
-    func getAllVideos() -> [VideoFileEntity] {
-        
-        do {
+    func getAllVideos() throws -> [VideoFileEntity] {
             let files = try getAllFileURLs()
                 .filter { $0.pathExtension == filesExtension }
                 .map { VideoFileEntity(title: $0.deletingPathExtension().lastPathComponent,
                                        size: 0, length: 0,
                                        fileExtension: $0.pathExtension) }
             return files
-        } catch {
-            print(error.localizedDescription)
-        }
-        return []
     }
     
     

@@ -11,6 +11,10 @@ import AVFoundation
 
 class VideoCaptureService: NSObject {
     
+    enum VideoCaptureError: Error {
+        case inputDeviceNotFound
+    }
+    
     private lazy var cameraSession: AVCaptureSession = {
         let cameraSession = AVCaptureSession()
         cameraSession.sessionPreset = AVCaptureSession.Preset.low
@@ -35,7 +39,11 @@ class VideoCaptureService: NSObject {
     }
     
     func startRecordingToFile(withName name: String? = nil, callback: @escaping (_ error: Error?, _ newFileUrl: URL?) -> ()) {
-
+        guard deviceInput != nil else {
+            callback(VideoCaptureError.inputDeviceNotFound, nil)
+            return
+        }
+        
         if !fileOutput.isRecording && !cameraSession.isRunning {
             videoFilesSource.prepareForWritingToFile(withName: name) { (error, newFileUrl)  in
                 //if error == nil {
@@ -57,7 +65,10 @@ class VideoCaptureService: NSObject {
     
     func configure(withFilesSource source: VideoFilesSource) throws {
         self.videoFilesSource = source
-        deviceInput = try AVCaptureDeviceInput(device: AVCaptureDevice.default(for: AVMediaType.video)!)
+        guard let inputDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
+            throw VideoCaptureError.inputDeviceNotFound
+        }
+        deviceInput = try AVCaptureDeviceInput(device: inputDevice)
         
         cameraSession.beginConfiguration()
         

@@ -21,6 +21,10 @@
 		05B59361212198D400ACB60C /* FileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B59360212198D400ACB60C /* FileEntity.swift */; };
 		05B593652121B0B700ACB60C /* VideoFilesSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B593642121B0B700ACB60C /* VideoFilesSource.swift */; };
 		05B593672121BE6800ACB60C /* VideoFileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B593662121BE6800ACB60C /* VideoFileEntity.swift */; };
+		05C6F428212EB1FB008C8F7B /* RecordingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6F427212EB1FB008C8F7B /* RecordingNavigationController.swift */; };
+		05C6F42B212EBEB7008C8F7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6F42A212EBEB7008C8F7B /* BaseViewController.swift */; };
+		05C6F431212EE37A008C8F7B /* BLERequestCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6F430212EE37A008C8F7B /* BLERequestCommand.swift */; };
+		05C6F433212EEFC2008C8F7B /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6F432212EEFC2008C8F7B /* ActionTableViewCell.swift */; };
 		05D8932C2122E6BC00423F46 /* Data+Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8932B2122E6BC00423F46 /* Data+Converters.swift */; };
 		05DD80A1211B232D00EE6A0E /* BLECentralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD80A0211B232D00EE6A0E /* BLECentralService.swift */; };
 		05DD80A3211B281B00EE6A0E /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD80A2211B281B00EE6A0E /* MainVM.swift */; };
@@ -44,6 +48,10 @@
 		05B59360212198D400ACB60C /* FileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEntity.swift; sourceTree = "<group>"; };
 		05B593642121B0B700ACB60C /* VideoFilesSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilesSource.swift; sourceTree = "<group>"; };
 		05B593662121BE6800ACB60C /* VideoFileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFileEntity.swift; sourceTree = "<group>"; };
+		05C6F427212EB1FB008C8F7B /* RecordingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNavigationController.swift; sourceTree = "<group>"; };
+		05C6F42A212EBEB7008C8F7B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		05C6F430212EE37A008C8F7B /* BLERequestCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLERequestCommand.swift; sourceTree = "<group>"; };
+		05C6F432212EEFC2008C8F7B /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
 		05D8932B2122E6BC00423F46 /* Data+Converters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Converters.swift"; sourceTree = "<group>"; };
 		05DD80A0211B232D00EE6A0E /* BLECentralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralService.swift; sourceTree = "<group>"; };
 		05DD80A2211B281B00EE6A0E /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
@@ -119,8 +127,9 @@
 		05B5935A2121951A00ACB60C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				05DD80A2211B281B00EE6A0E /* MainVM.swift */,
-				05319EC52114816300A38ADD /* ViewController.swift */,
+				05C6F429212EBE68008C8F7B /* Base */,
+				05C6F426212EB1B7008C8F7B /* Navigation */,
+				05C6F425212EB18F008C8F7B /* MainScreen */,
 				05B59357212193F500ACB60C /* VideoList */,
 			);
 			path = Modules;
@@ -149,8 +158,35 @@
 			children = (
 				05B59360212198D400ACB60C /* FileEntity.swift */,
 				05B593662121BE6800ACB60C /* VideoFileEntity.swift */,
+				05C6F430212EE37A008C8F7B /* BLERequestCommand.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		05C6F425212EB18F008C8F7B /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				05DD80A2211B281B00EE6A0E /* MainVM.swift */,
+				05319EC52114816300A38ADD /* ViewController.swift */,
+				05C6F432212EEFC2008C8F7B /* ActionTableViewCell.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		05C6F426212EB1B7008C8F7B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				05C6F427212EB1FB008C8F7B /* RecordingNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		05C6F429212EBE68008C8F7B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				05C6F42A212EBEB7008C8F7B /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		05D8932A2122E6AC00423F46 /* Extensions */ = {
@@ -327,17 +363,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B59361212198D400ACB60C /* FileEntity.swift in Sources */,
+				05C6F431212EE37A008C8F7B /* BLERequestCommand.swift in Sources */,
 				05B59356212193D800ACB60C /* VideoListViewController.swift in Sources */,
 				05DD80A3211B281B00EE6A0E /* MainVM.swift in Sources */,
 				05735DF121187D5A00C4F1ED /* VideoCaptureService.swift in Sources */,
 				05B593672121BE6800ACB60C /* VideoFileEntity.swift in Sources */,
 				05319EC62114816300A38ADD /* ViewController.swift in Sources */,
 				05319EC42114816300A38ADD /* AppDelegate.swift in Sources */,
+				05C6F428212EB1FB008C8F7B /* RecordingNavigationController.swift in Sources */,
 				05B593652121B0B700ACB60C /* VideoFilesSource.swift in Sources */,
 				053FBEDF211C68330016259A /* BLEPeripheralService.swift in Sources */,
+				05C6F433212EEFC2008C8F7B /* ActionTableViewCell.swift in Sources */,
 				05B5935E212195BF00ACB60C /* VideoListVM.swift in Sources */,
 				05DD80A1211B232D00EE6A0E /* BLECentralService.swift in Sources */,
 				05A297862121D4D8007F52DC /* AppConstants.swift in Sources */,
+				05C6F42B212EBEB7008C8F7B /* BaseViewController.swift in Sources */,
 				05D8932C2122E6BC00423F46 /* Data+Converters.swift in Sources */,
 				05B593592121942F00ACB60C /* VideoListTableViewCell.swift in Sources */,
 			);

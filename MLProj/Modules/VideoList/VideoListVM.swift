@@ -19,7 +19,11 @@ class VideoListVM {
     }
     
     private func configureServices() {
-       videos = videosSource.getAllVideos()
+        do {
+            videos = try videosSource.getAllVideos()
+        } catch {
+            print("error \(error)")
+        }
     }
   
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoListViewController: UIViewController {
+class VideoListViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var vm: VideoListVM!
