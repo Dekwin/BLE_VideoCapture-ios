@@ -12,7 +12,7 @@ import CoreBluetooth
 protocol BLEDelegate: class {
     func bleStateChanged(state: CBManagerState)
     func bleDidRecieve(command: BLERequestCommand)
-    var state: VideoCaptureState { get }
+    var videoCaptureState: VideoCaptureState { get }
 }
 
 extension BLEDelegate {
@@ -30,7 +30,7 @@ extension BLEDelegate {
     }
     
     func handleRead(request: CBATTRequest, withPeripheral peripheral: CBPeripheralManager) {
-        request.value = state.dataRepresentation
+        request.value = videoCaptureState.dataRepresentation
         peripheral.respond(to: request, withResult: .success)
     }
 }

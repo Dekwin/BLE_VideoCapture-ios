@@ -77,7 +77,7 @@ extension MainVM: BLEDelegate {
     
     func bleDidRecieve(command: BLERequestCommand) {
         DispatchQueue.main.async {
-            let action = BLERequestAction(command: command, videoCaptureState: self.state)
+            let action = BLERequestAction(command: command, videoCaptureState: self.videoCaptureState)
             self.bleActionsLog.append(action)
             self.delegate?.didRecieve(requestAction: action)
             guard action.isPerformable else {
@@ -90,7 +90,7 @@ extension MainVM: BLEDelegate {
                 self.startRecording()
                 
             default:
-                print("Unknown command: \(command), state: \(self.state).")
+                print("Unknown command: \(command), state: \(self.videoCaptureState).")
                 break
             }
         }
@@ -108,7 +108,7 @@ extension MainVM: BLEDelegate {
         delegate?.bleState(isPoweredOn: state == .poweredOn)
     }
     
-    var state: VideoCaptureState {
+    var videoCaptureState: VideoCaptureState {
         return videoCaptureService.state
     }
     
