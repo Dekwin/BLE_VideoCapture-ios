@@ -18,8 +18,6 @@ class BLECentralService: NSObject {
         super.init()
         centralManager = CBCentralManager(delegate: self, queue: dispatchQueue, options: [:])
     }
-
-    
 }
 
 extension BLECentralService: CBCentralManagerDelegate {

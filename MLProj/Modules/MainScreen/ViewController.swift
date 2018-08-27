@@ -30,8 +30,7 @@ class ViewController: BaseViewController {
         actionsTableView.dataSource = self
         vm.delegate = self
     }
-
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -85,12 +84,12 @@ extension ViewController: BLEConfiguratorView {
     
     private func setError(text: String?) {
         DispatchQueue.main.async {
-        if let text = text {
-            self.errorButton.setTitle(text, for: .normal)
-            self.errorButton.isHidden = false
-        }else {
-            self.errorButton.isHidden = true
-        }
+            if let text = text {
+                self.errorButton.setTitle(text, for: .normal)
+                self.errorButton.isHidden = false
+            }else {
+                self.errorButton.isHidden = true
+            }
         }
     }
     

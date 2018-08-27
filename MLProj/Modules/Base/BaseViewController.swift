@@ -12,7 +12,7 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let item: UIBarButtonItem = UIBarButtonItem(title: "hjvg", style: UIBarButtonItemStyle.done, target: self, action: nil)
+        let item: UIBarButtonItem = UIBarButtonItem(title: "Rec", style: UIBarButtonItemStyle.done, target: self, action: nil)
         navigationItem.rightBarButtonItem = item
         // Do any additional setup after loading the view.
     }

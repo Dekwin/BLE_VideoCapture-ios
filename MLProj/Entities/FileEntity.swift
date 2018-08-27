@@ -13,11 +13,13 @@ class FileEntity {
     var title: String
     var size: Double
     var fileExtension: String?
+    var url: URL
     
-    init(title: String, size: Double, fileExtension: String? = nil) {
+    init(title: String, size: Double, fileExtension: String? = nil, url: URL) {
         self.title = title
         self.size = size
         self.fileExtension = fileExtension
+        self.url = url
     }
 }
 

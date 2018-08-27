@@ -15,15 +15,24 @@ class VideoListVM {
     
     init(videosSource: VideoFilesSource) {
         self.videosSource = videosSource
-        configureServices()
+        reloadVideos()
     }
     
-    private func configureServices() {
+    private func reloadVideos() {
         do {
             videos = try videosSource.getAllVideos()
         } catch {
             print("error \(error)")
         }
+    }
+    
+    func removeVideo(atIndex index: Int, callback: @escaping (Error?) -> ()) {
+        
+        videosSource.removeVideo(atUrl: videos[index].url) { [weak self] error in
+            self?.reloadVideos()
+            callback(error)
+        }
+        
     }
   
 }

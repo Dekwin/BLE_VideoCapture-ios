@@ -27,23 +27,12 @@ extension BLEDelegate {
     
     private func handleWrite(data: Data) {
         bleDidRecieve(command: BLERequestCommand(commandRepresentation: data))
-//
-//        switch command {
-//        case 0 where state == .recording:  // should this logic be here?
-//            bleStopRecordingRequest()
-//        case 1 where state == .ready:
-//            bleStartRecordingRequest()
-//        default:
-//            print("Unknown command: \(command), state: \(state).")
-//            break
-//        }
     }
     
     func handleRead(request: CBATTRequest, withPeripheral peripheral: CBPeripheralManager) {
         request.value = state.dataRepresentation
         peripheral.respond(to: request, withResult: .success)
     }
-    
 }
 
 fileprivate extension VideoCaptureState {
@@ -93,7 +82,7 @@ class BLEPeripheralService: NSObject {
         super.init()
         peripheralManager = CBPeripheralManager(delegate: self, queue: dispatchQueue)
     }
-
+    
     func startAdvertising() {
         if !peripheralManager.isAdvertising && peripheralManager.state == .poweredOn {
             peripheralManager.startAdvertising([CBAdvertisementDataLocalNameKey : advertName])
@@ -108,7 +97,6 @@ class BLEPeripheralService: NSObject {
     
 }
 
-
 extension BLEPeripheralService: CBPeripheralManagerDelegate {
     
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
@@ -117,7 +105,7 @@ extension BLEPeripheralService: CBPeripheralManagerDelegate {
     
     func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
         let videoService = CBMutableService(type: serviceUUID, primary: true)
-
+        
         let videoManagerCharacteristic = CBMutableCharacteristic(type: videoCharacteristicUUID, properties: [CBCharacteristicProperties.read, CBCharacteristicProperties.write], value: nil, permissions: [CBAttributePermissions.writeable, CBAttributePermissions.readable])
         
         videoService.characteristics = [videoManagerCharacteristic]
@@ -127,7 +115,6 @@ extension BLEPeripheralService: CBPeripheralManagerDelegate {
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager, didAdd service: CBService, error: Error?) {
-        print("didadd err \(error)")
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {

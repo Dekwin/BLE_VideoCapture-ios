@@ -16,15 +16,17 @@ class VideoFilesSource {
     }
     
     func getAllVideos() throws -> [VideoFileEntity] {
-            let files = try getAllFileURLs()
-                .filter { $0.pathExtension == filesExtension }
-                .map { VideoFileEntity(title: $0.deletingPathExtension().lastPathComponent,
-                                       size: 0, length: 0,
-                                       fileExtension: $0.pathExtension) }
-            return files
+        let files = try getAllFileURLs()
+            .filter { $0.pathExtension == filesExtension }
+            .map { VideoFileEntity(title: $0.deletingPathExtension().lastPathComponent,
+                                   size: 0, length: 0,
+                                   fileExtension: $0.pathExtension, url: $0) }
+        return files
     }
     
-    
+    func removeVideo(atUrl url: URL, callback: @escaping (Error?) -> ()) {
+        removeFile(at: url, callback: callback)
+    }
     
 }
 
@@ -53,7 +55,7 @@ extension FilesSource {
         return try fileManager.contentsOfDirectory(at: filesSourceURL, includingPropertiesForKeys: nil, options: [])
     }
     
-    private func removeFile(at url: URL,  callback: @escaping (_ error: Error?) -> ()) {
+    fileprivate func removeFile(at url: URL,  callback: @escaping (_ error: Error?) -> ()) {
         DispatchQueue.global(qos: .default).async {
             do {
                 try self.fileManager.removeItem(at: url)

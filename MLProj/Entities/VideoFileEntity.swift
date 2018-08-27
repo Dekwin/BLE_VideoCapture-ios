@@ -11,8 +11,8 @@ import Foundation
 class VideoFileEntity: FileEntity {
     var length: Double
     
-    init(title: String, size: Double, length: Double, fileExtension: String? = nil) {
+    init(title: String, size: Double, length: Double, fileExtension: String? = nil, url: URL) {
         self.length = length
-        super.init(title: title, size: size, fileExtension: fileExtension)
+        super.init(title: title, size: size, fileExtension: fileExtension, url: url)
     }
 }
